@@ -1,0 +1,42 @@
+<div class="page">
+    <section class="well2">
+        <div class="container">
+            <h2 style="color:mediumseagreen"> Information Courses</h2>
+            <hr/>
+            <div class="row" *ngFor="let course of courses ">
+                <div class="col-md-4">
+                     <h3>{{course.name}}</h3>
+                </div>
+                <div class="col-md-4  col-sm-6">
+                      Teacher: <h3> {{course.teacher.name}}</h3>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                       {{course.description}}
+                </div>
+                <hr/>
+            </div>
+        </div>
+    </section>
+    <section class="well2 bg-primary">
+        <div class="container center767">
+            <h2>
+                Meet Our Teachers
+            </h2>
+            <br/>
+            <div class="inline-list" *ngFor="let teacher of teachers">
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
+                    <div class="thumbnail">
+                            <img src="assets/images/page-2_img02.jpg" />
+                    </div>
+                    <h3>
+                        Name:{{teacher.name}}
+                    </h3>
+                    <p>
+                       Age:{{teacher.age}}
+                    </p>
+                    <p>Contact:{{teacher.contact}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

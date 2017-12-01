@@ -1,0 +1,71 @@
+<section class="well2">
+  <div class="container">
+    <!-- <h2>Contacts</h2>
+    <div class="map">
+      <div id="google-map" class="map_model" data-zoom="6"></div>
+      <ul class="map_locations">
+        <li data-x="-73.9874068" data-y="40.643180">
+          <p> 9870 St Vincent Place, Glasgow, DC 45 Fr 45.
+            <span>800 2345-6789</span>
+          </p>
+        </li>
+      </ul>
+    </div> -->
+
+    <div class="row offs">
+      <div class="col-md-4 col-sm-12 col-xs-12 center991 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.2s">
+        <h2>Contact Info</h2>
+
+        <div class="contact-info center991">
+          <address class="h3 text-primary">4578 Marmora Road,
+            <br/> Glasgow D04 89GR
+          </address>
+          <dl>
+            <dt>Freephone:</dt>
+            <dd>
+              <a href="callto:#"> +1 800 559 6580</a>
+            </dd>
+            <dt>FAX:</dt>
+            <dd>
+              <a href="callto:#"> +1 800 603 6035</a>
+            </dd>
+            <dt>E-mail:</dt>
+            <dd>
+              <a href="mailto:#">mail@demolink.org</a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="col-md-8 col-sm-12 col-xs-12">
+        <h2>Contact Form</h2>
+        <div class="modal-body">
+          <form  [formGroup]="createContact">
+            <div class="form-group col-md-6 col-sm-12 col-xs-12 col_mod">
+              <label class="form-label" data-add-placeholder for="mailform-input-name"></label>
+              <input  type="text" formControlName="name" class="form-control" name="name" id="name" placeholder="Name"  required>
+              <br/>
+              <div class="col-md-12 col-xs-12 alert alert-danger" role="alert" *ngIf="createContact.get('name')?.errors?.required && createContact.get('name')?.touched">Name is required</div>
+            </div>
+            <div class="form-group col-md-6 col-sm-12 col-xs-12 col_mod">
+              <label class="form-label" data-add-placeholder for="mailform-input-email"></label>
+              <input type="text" name="email" formControlName="email" placeholder="Email"class="form-control" id="email" required>
+              <br/>
+              <div class="col-md-12 col-xs-12 alert alert-danger" role="alert" *ngIf="createContact.get('email')?.errors?.required && createContact.get('email')?.touched">Email is required</div>
+              <div class="col-md-12 col-xs-12 alert alert-danger" [hidden]="createContact.get('email')?.errors?.required" role="alert" *ngIf="createContact.get('email')?.errors?.pattern">Email is not media type</div>
+            </div>
+            <div class="form-group textarea col-md-12 col-sm-12 col-xs-12 col_mod">
+              <label class="form-label" data-add-placeholder for="mailform-input-textarea"></label>
+              <textarea name="message" formControlName="message" placeholder="Message" class="form-control" id="message" required></textarea>
+            </div>
+            <div class="form-group btn-wr col-md-12 col-sm-12 col-xs-12 col_mod">
+              <div class="mfControls">
+                <button class="btn btn-primary btn-primary__mod" type="submit" [disabled]="createContact.invalid || valiEmail" data-dismiss="modal" (click)="onCreate()">Submit </button>
+                <!-- <div class="mfInfo"></div> -->
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
